@@ -1,0 +1,98 @@
+
+/* style.css - About MultiScanner (Light Theme) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --accent:#ff4d6d;
+  --muted:#6b7280;
+  --text:#0f172a;
+  --glass: rgba(255,77,109,0.06);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px;
+}
+
+/* layout */
+.wrapper{max-width:1000px;margin:0 auto;}
+
+/* header */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:22px;
+}
+.brand{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+.logo{
+  width:64px;height:64px;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),#ff8aa3);
+  display:grid;place-items:center;color:white;font-weight:700;font-size:26px;
+  box-shadow: 0 6px 18px rgba(255,77,109,0.16);
+}
+.title{
+  line-height:1;
+}
+.title h1{font-size:22px}
+.title p{color:var(--muted);font-size:14px;margin-top:6px}
+
+/* hero card */
+.hero{
+  background:var(--card);
+  padding:28px;
+  border-radius:14px;
+  box-shadow: 0 8px 30px rgba(15,23,42,0.06);
+  border: 1px solid rgba(15,23,42,0.03);
+  margin-bottom:18px;
+}
+.tag{
+  display:inline-block;
+  background:var(--glass);
+  color:var(--accent);
+  padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;margin-bottom:12px;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
+}
+.lead{font-size:18px;color:var(--text);margin-top:8px;line-height:1.5}
+
+/* features grid */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.card{
+  background:linear-gradient(180deg,#ffffff, #fffbfb);
+  padding:18px;border-radius:12px;border:1px solid rgba(15,23,42,0.04);
+  box-shadow: 0 6px 18px rgba(12,16,22,0.03);
+}
+.card h3{font-size:16px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px;line-height:1.5}
+
+/* CTA */
+.cta{display:flex;gap:12px;align-items:center;margin-top:18px}
+.primary{
+  background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:700;border:none;
+  box-shadow: 0 8px 20px rgba(255,77,109,0.18);cursor:pointer;text-decoration:none;
+}
+.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:10px 14px;border-radius:10px;color:var(--text);text-decoration:none}
+
+/* footer */
+.footer{margin-top:26px;text-align:center;color:var(--muted);font-size:14px}
+
+/* responsive */
+@media (max-width:780px){
+  .grid{grid-template-columns:1fr}
+  body{padding:18px}
+  .logo{width:56px;height:56px}
+  .title h1{font-size:18px}
+}
